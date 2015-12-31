@@ -23,6 +23,7 @@
         <property name="connection.pool_size">1</property>
 
         <!-- SQL dialect -->
+        <!-- language that specify how hibernate will execute query -->
         <property name="dialect">org.hibernate.dialect.H2Dialect</property>
 
         <!-- Disable the second-level cache  -->
@@ -32,9 +33,26 @@
         <property name="show_sql">true</property>
 
         <!-- Drop and re-create the database schema on startup -->
+        <!-- if you dont want peviously created table to drop. You can change create to update -->
         <property name="hbm2ddl.auto">create</property>
 
-        <mapping class="UserDetails"/>
+
+
+<!-- 1 -->
+<!--  
+        <mapping class="Simple_Hibernate_Example.UserDetails"/>
+-->        
+        
+<!-- 2 -->
+  
+		<mapping class="More_Annotation.UserDetails"/>
+
+
+
+
+
+
+
 
     </session-factory>
 
