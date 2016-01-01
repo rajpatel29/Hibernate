@@ -1,18 +1,16 @@
-package Simple_Hibernate_Example;
-import javax.persistence.Column;
+package Primary_Keys;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-//this class needs to save it in database
-@Entity(name="USER_DETAILS")
-public class UserDetails
+@Entity
+public class UserDeta
 {
 	//for primary key
-	@Id @GeneratedValue
-	@Column(name = "USER_ID")
+	@Id @GeneratedValue(strategy = GenerationType.AUTO)
 	private int userId;
-	@Column(name = "USER_NAME")
 	private String userName;
 	
 	public int getUserId() {
@@ -30,3 +28,4 @@ public class UserDetails
 	
 	
 }
+

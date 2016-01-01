@@ -44,8 +44,30 @@
 -->        
         
 <!-- 2 -->
-  
+<!--    
 		<mapping class="More_Annotation.UserDetails"/>
+-->
+
+<!-- 3 -->
+<!--  
+		<mapping class="Primary_Keys.UserDeta"/>
+-->
+
+<!-- 4 -->
+<!--  
+	<mapping  class="Value_Type_and_Embedding_Object.UserClass"  />
+-->
+
+<!-- 5 -->
+<!--  
+	<mapping class="AttributeOverrides_and_Embedded_Object_Keys.UserClass"/>
+-->
+
+
+<!-- 6 -->
+<!--  
+	<mapping class = "Saving_Collection.UserClass" />
+-->
 
 
 

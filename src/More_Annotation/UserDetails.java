@@ -3,6 +3,7 @@ package More_Annotation;
 import java.util.Date;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Lob;
 import javax.persistence.Table;
@@ -16,7 +17,7 @@ import javax.persistence.Transient;
 public class UserDetails
 {
 	//for primary key
-	@Id
+	@Id   //hibernate automatically generates key
 	private int userId;
 	private String userName;
 	
