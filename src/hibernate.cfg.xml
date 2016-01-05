@@ -69,11 +69,71 @@
 	<mapping class = "Saving_Collection.UserClass" />
 -->
 
+<!-- 7 -->
+<!--  
+	<mapping class="One_To_One_Mapping.UserClass"/>
+	<mapping class="One_To_One_Mapping.Vehicle"/>
+-->
+
+
+<!-- 8 -->
+<!--  
+	<mapping class="One_To_Many.UserClass"/>
+	<mapping class="One_To_Many.Vehicle"/>
+-->
+
+
+<!-- 9 -->
+<!--  
+	<mapping class="One_To_Many_No_Extra_Table.UserClass"/>
+	<mapping class="One_To_Many_No_Extra_Table.Vehicle"/>
+-->
 
 
 
+<!-- 10 -->
+<!--  
+	<mapping class="Many_To_Many.UserClass"/>
+	<mapping class="Many_To_Many.Vehicle"/>
+-->
 
 
+
+<!-- 11 -->
+<!--  
+	<mapping class="Cascade_Types.UserClass"/>
+	<mapping class="Cascade_Types.Vehicle"/>
+-->
+
+
+<!-- 12 -->
+<!--  
+	<mapping class="Inheritance_Single_Table.Vehicle"/>
+	<mapping class="Inheritance_Single_Table.TwoWheeler"/>
+	<mapping class="Inheritance_Single_Table.FourWheeler"/>
+-->
+
+<!-- 13 -->
+<!--  
+	<mapping class="Inheritance_Table_Per_Class.Vehicle"/>
+	<mapping class="Inheritance_Table_Per_Class.TwoWheeler"/>
+	<mapping class="Inheritance_Table_Per_Class.FourWheeler"/>
+-->
+
+	
+<!-- 14 -->	
+<!--  
+	<mapping class="Inheritance_with_Joined_Strategy.Vehicle"/>
+	<mapping class="Inheritance_with_Joined_Strategy.TwoWheeler"/>
+	<mapping class="Inheritance_with_Joined_Strategy.FourWheeler"/>
+-->
+
+
+<!-- 15 CRUD -->	
+	
+	<mapping class="CRUD.UserClass" />
+	
+	
 
 
     </session-factory>
