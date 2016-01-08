@@ -1,5 +1,8 @@
 import java.util.Date;
+import java.util.Iterator;
+import java.util.List;
 
+import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
@@ -421,23 +424,24 @@ public class MainClass
 	    
 	    
 	    
+	    
+/*	    
 	    Session session = sessionFactory.openSession();
 	    session.beginTransaction();
 	    
-	    /*
-		    for (int j = 0; j < 10; j++) 
-		    {
-		    	CRUD.UserClass user = new CRUD.UserClass();
-		    	user.setUserId(j);
-		    	user.setUserName("User " + j);
-		    	session.save(user);
-			}
-	    */
+//		    for (int j = 0; j < 10; j++) 
+//		    {
+//		    	CRUD.UserClass user = new CRUD.UserClass();
+//		    	user.setUserId(j);
+//		    	user.setUserName("User " + j);
+//		    	session.save(user);
+//			}
 	    
 	    
 	    CRUD.UserClass user = (CRUD.UserClass) session.get(CRUD.UserClass.class , 5 );
 	    
 	    //delete
+	    //when you delete an object then it becomes a transient object
 	    CRUD.UserClass user1 = (CRUD.UserClass) session.get(CRUD.UserClass.class , 6 );
 	    session.delete(user1);
 	    
@@ -451,6 +455,115 @@ public class MainClass
 	    
 	    //since userName is not a collection there is no eager or lazy initialization. It is by default eager
 	    System.out.println("User Name is: " + user.getUserName());
+*/
+	    
+/*	    
+	    //if we do not save any object then it is called as transient object
+	    Transient_Persistent_and_Detached_Objects.UserClass user = new Transient_Persistent_and_Detached_Objects.UserClass();
+	    user.setUserId(1);
+	    user.setUserName("User 1");
+	    
+	    
+	    Session session = sessionFactory.openSession();
+	    session.beginTransaction();
+	    
+	    
+	    //if we save an object then it is called as persistent object
+	    session.save(user);
+	    user.setUserName("Updated user Name");
+	    
+	    
+	   session.getTransaction().commit();
+	   session.close();
+	    
+	    
+	   //if we have already saved an object and if we close the session then that object is called as ditched object
+	   user.setUserName("this is not gonna update");
+*/
+	    
+	    
+	
+/*	    
+	    Session session = sessionFactory.openSession();
+	    session.beginTransaction();
+	    
+	    
+	    //for (int i = 0; i < 10; i++) 
+	    //{
+	    //    HQL.UserClass user = new HQL.UserClass();
+		//    user.setUserId(i);
+		//    user.setUserName("UserName " + i);
+		//    session.save(user);
+		//}
+	    
+//	    Query  query = session.createQuery("From UserClass");
+	    Query  query = session.createQuery("From UserClass where userId > 5");
+	    
+	    List list = query.list();
+	    
+	    session.getTransaction().commit();
+	    session.close();
+	    System.out.println(list.size());
+	
+	    
+	    
+	    System.out.println("===================================================");
+	    
+	    
+	    
+	    Session session = sessionFactory.openSession();
+	    session.beginTransaction();
+	    //If you are only interest  in userName then
+	    //Query  query = session.createQuery("Select userName From UserClass ");
+	    //Query  query = session.createQuery("Select max(userId) From UserClass ");
+	    //Query  query = session.createQuery("Select new map(userId , userName) From UserClass ");  //it returns map
+	    
+	    Query  query = session.createQuery("From UserClass ");
+	    //pagination
+	    query.setFirstResult(5);
+	    query.setMaxResults(2);
+	    
+	    
+	    List<HQL.UserClass> users = query.list();
+	    session.getTransaction().commit();
+	    session.close();
+	    
+	    
+	    for (HQL.UserClass user : users) 
+	    {
+	    	System.out.println(user.getUserName());
+		}
+*/	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
 	    
 	    
 	    

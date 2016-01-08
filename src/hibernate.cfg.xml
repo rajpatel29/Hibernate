@@ -130,9 +130,37 @@
 
 
 <!-- 15 CRUD -->	
-	
+<!--  	
 	<mapping class="CRUD.UserClass" />
-	
+-->
+
+
+<!--  16   Transient_Persistent_and_Detached_Objects -->
+<!--  
+	<mapping  class="Transient_Persistent_and_Detached_Objects.UserClass" />
+-->
+
+
+<!-- 17 HQL -->
+<!--  
+	<mapping  class="HQL.UserClass" />
+-->
+
+
+
+<!-- 18 -->
+<!--  
+	<mapping class="Parameter_Substitution_and_SQL_Injection.UserClass"/>
+-->
+
+
+<!-- 19 -->
+<!--  
+	<mapping  class="Named_Queries.UserClass"  />
+-->
+
+<!-- 20 -->
+	<mapping class="Criteria_API.UserClass" />
 	
 
 
