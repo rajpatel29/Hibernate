@@ -39,24 +39,24 @@
 
 
 <!-- 1 -->
-<!--  
-        <mapping class="Simple_Hibernate_Example.UserDetails"/>
--->        
-        
+<!-- 
+	<mapping class="Simple_Hibernate_Example.UserDetails"/> 		       
+-->
+
 <!-- 2 -->
 <!--    
 		<mapping class="More_Annotation.UserDetails"/>
 -->
-
 <!-- 3 -->
 <!--  
 		<mapping class="Primary_Keys.UserDeta"/>
 -->
 
+
 <!-- 4 -->
-<!--  
+
 	<mapping  class="Value_Type_and_Embedding_Object.UserClass"  />
--->
+
 
 <!-- 5 -->
 <!--  
@@ -160,8 +160,9 @@
 -->
 
 <!-- 20 -->
+<!--  
 	<mapping class="Criteria_API.UserClass" />
-	
+-->	
 
 
     </session-factory>

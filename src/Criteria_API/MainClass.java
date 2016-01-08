@@ -22,9 +22,6 @@ public class MainClass
 		sessionFactory = configuration.buildSessionFactory(serviceRegistery);
 		
 		
-	
-		
-		
 		
 		Session session = sessionFactory.openSession();
 		session.beginTransaction();

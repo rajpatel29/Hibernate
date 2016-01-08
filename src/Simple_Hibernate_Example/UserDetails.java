@@ -9,7 +9,7 @@ import javax.persistence.Id;
 public class UserDetails
 {
 	//for primary key
-	@Id @GeneratedValue
+	@Id 
 	@Column(name = "USER_ID")
 	private int userId;
 	@Column(name = "USER_NAME")

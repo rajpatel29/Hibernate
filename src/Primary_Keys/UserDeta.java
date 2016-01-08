@@ -9,7 +9,9 @@ import javax.persistence.Id;
 public class UserDeta
 {
 	//for primary key
-	@Id @GeneratedValue(strategy = GenerationType.AUTO)
+	
+	// @GeneratedValue(strategy = GenerationType.AUTO)
+	@Id 
 	private int userId;
 	private String userName;
 	
